@@ -4,15 +4,16 @@ import os
 import gzip
 import numpy as np
 
-MPQAFILE = "resources/subjclueslen1-HLTEMNLP05.tff"
-MRCFILE = "resources/mrc2.dct"
-GENINQFILE = "resources/inquirerTags.txt"
-BROWNCLUSFILE = "resources/brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
-NEURALVECFILE = "resources/embeddings-scaled.EMBEDDING_SIZE=100.txt.gz"
-CONNFILE = "data/connectives.txt"
-IDF_FILE = "data/nyt2006.idf.txt"
-IDF_FILE2 = "data/nyt2006.idf.lower.txt"
-STOPWORDFILE = "data/nltkstopwords.txt"
+RT = "/nlp/users/ljunyi/projects/speciteller/"
+MPQAFILE = RT+"resources/subjclueslen1-HLTEMNLP05.tff"
+MRCFILE = RT+"resources/mrc2.dct"
+GENINQFILE = RT+"resources/inquirerTags.txt"
+BROWNCLUSFILE = RT+"resources/brown-rcv1.clean.tokenized-CoNLL03.txt-c100-freq1.txt"
+NEURALVECFILE = RT+"resources/embeddings-scaled.EMBEDDING_SIZE=100.txt.gz"
+CONNFILE = RT+"data/connectives.txt"
+IDF_FILE = RT+"data/nyt2006.idf.txt"
+IDF_FILE2 = RT+"data/nyt2006.idf.lower.txt"
+STOPWORDFILE = RT+"data/nltkstopwords.txt"
 
 SrilmInfo = namedtuple("SrilmInfo","sentid,logprob,ppl,ppl1,noovs,nzeroprobs,nwords,nsents")
 

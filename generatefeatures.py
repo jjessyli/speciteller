@@ -31,6 +31,14 @@ class ModelNewText(object):
                 i += 1
         f.close()
 
+    def loadSentences(self, identifier, sentlist):
+        ## sentlist should be a list of sentence strings, tokenized;
+        ## identifier is a string serving as the header of this sentlst
+        self.test = []
+        self.fileid = identifier
+        for i,sent in enumerate(sentlist):
+            self.test.append(Instance(identifier+"."+str(i),0,features.RawSent(sent)))
+            
     def _add_feature(self, key, values):
         if key in self.featurestest: return
         self.featurestest[key] = values

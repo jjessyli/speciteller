@@ -8,11 +8,12 @@ import sys
 from features import Space
 from generatefeatures import ModelNewText
 
-BRNCLSTSPACEFILE = "cotraining_models/brnclst1gram.space"
-SHALLOWSCALEFILE = "cotraining_models/shallow.scale"
-SHALLOWMODELFILE = "cotraining_models/shallow.model"
-NEURALBRNSCALEFILE = "cotraining_models/neuralbrn.scale"
-NEURALBRNMODELFILE = "cotraining_models/neuralbrn.model"
+RT = "/nlp/users/ljunyi/projects/speciteller/"
+BRNCLSTSPACEFILE = RT+"cotraining_models/brnclst1gram.space"
+SHALLOWSCALEFILE = RT+"cotraining_models/shallow.scale"
+SHALLOWMODELFILE = RT+"cotraining_models/shallow.model"
+NEURALBRNSCALEFILE = RT+"cotraining_models/neuralbrn.scale"
+NEURALBRNMODELFILE = RT+"cotraining_models/neuralbrn.model"
 
 def initBrnSpace():
     s = Space(101)
@@ -84,6 +85,21 @@ def writeSpecificity(preds, outf):
             f.write("%f\n" % x)
         f.close()
     print "Output to "+outf+" done."
+
+def run(identifier, sentlist):
+    ## main function to run speciteller and return predictions
+    ## sentlist should be a list of sentence strings, tokenized;
+    ## identifier is a string serving as the header of this sentlst
+    aligner = ModelNewText(brnspace,brnclst,embeddings)
+    aligner.loadSentences(identifier, sentlist)
+    aligner.fShallow()
+    aligner.fNeuralVec()
+    aligner.fBrownCluster()
+    y,xs = aligner.transformShallow()
+    _,xw = aligner.transformWordRep()
+    preds_comb, preds_s, preds_w = predict(y,xs,xw)
+    return preds_comb
+    
 
 if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
