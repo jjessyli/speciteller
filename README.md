@@ -1,6 +1,6 @@
 # SPECITELLER is a tool to predict sentence specificity.
 
-The models in this package are obtained using co-training as described in Li and Nenkova, *Fast and Accurate Prediction of Sentence Specificity*, AAAI 2015.
+The models in this package are obtained using co-training as described in Li and Nenkova, [Fast and Accurate Prediction of Sentence Specificity](http://www.seas.upenn.edu/~ljunyi/papers/specificity.pdf), AAAI 2015.
 
 ## Dependencies
 
@@ -11,7 +11,7 @@ Speciteller is implemented using Python 2.7. It depends on the following package
 
 ## Data and resources
 
-Word lexicons for the models are available to download [here](http://www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that those resources come with license(s). Decompress the tar ball under this (i.e., the speciteller) directory.
+Word lexicons for the models are available for download [here](http://www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that these resources come with license(s). Decompress the tar ball under this (i.e., the speciteller) directory.
 
 ## Running Speciteller
 
