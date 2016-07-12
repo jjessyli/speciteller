@@ -11,7 +11,7 @@ Speciteller is implemented using Python 2.7. It depends on the following package
 
 ## Data and resources
 
-Word lexicons for the models are available to download [here](www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that those resources come with license(s). Decompress the tar ball under this (i.e., the speciteller) directory.
+Word lexicons for the models are available to download [here](http://www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that those resources come with license(s). Decompress the tar ball under this (i.e., the speciteller) directory.
 
 ## Running Speciteller
 
