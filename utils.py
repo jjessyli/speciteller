@@ -1,3 +1,5 @@
+## Author: Jessy Li (ljunyi@seas.upenn.edu)
+
 from collections import namedtuple, Counter
 from math import log
 import os

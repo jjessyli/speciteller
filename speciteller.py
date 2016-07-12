@@ -1,3 +1,4 @@
+## Author: Jessy Li (ljunyi@seas.upenn.edu)
 #!/usr/bin/python
 
 import argparse
@@ -105,11 +106,13 @@ if __name__ == "__main__":
     argparser = argparse.ArgumentParser()
     argparser.add_argument("--inputfile", help="input raw text file, one sentence per line, tokenized", required=True)
     argparser.add_argument("--outputfile", help="output file to save the specificity scores", required=True)
+    argparser.add_argument("--write_all_preds", help="write predictions from individual models in addition to the overall one", action="store_true")
     # argparser.add_argument("--tokenize", help="tokenize input sentences?", required=True)
-    sys.stderr.write("SPECITELLER: please make sure that your input sentences are WORD-TOKENIZED!\n")
+    sys.stderr.write("SPECITELLER: please make sure that your input sentences are WORD-TOKENIZED for better prediction.\n")
     args = argparser.parse_args()
     y,xs,xw = getFeatures(args.inputfile)
     preds_comb, preds_s, preds_w = predict(y,xs,xw)
     writeSpecificity(preds_comb,args.outputfile)
-    writeSpecificity(preds_s,args.outputfile+".s")
-    writeSpecificity(preds_w,args.outputfile+".w")
+    if args.write_all_preds:
+        writeSpecificity(preds_s,args.outputfile+".s")
+        writeSpecificity(preds_w,args.outputfile+".w")

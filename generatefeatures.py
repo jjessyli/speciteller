@@ -1,3 +1,4 @@
+## Author: Jessy Li (ljunyi@seas.upenn.edu)
 
 ## given raw text files, generate features for
 ## shallow and neuralbrn classifiers
