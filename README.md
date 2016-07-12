@@ -7,7 +7,7 @@ The models in this package are obtained using co-training as described in Li and
 Speciteller is implemented using Python 2.7. It depends on the following packages:
 
 - numpy
-- liblinear (in particular, liblinearutil.py; be sure you have an liblinear.so.<x> file in its python/ directory. If not, type "make" in python/)
+- liblinear (in particular, `liblinearutil.py`; be sure you have a `liblinear.so.<x>` file in its `python/` directory. If not, type `make` in python/)
 
 ## Data and resources
 
@@ -31,10 +31,10 @@ This will give you specificity scores for the two sentences in testsentences.txt
 The scores range from 0 to 1, with 0 being most general and 1 being most specific.
 
 ## Practical notes
---It is best that you word-tokenize your sentences. If you don't, you will still get a score, but less good (~4% less accurate if you translate them into labels with a cutoff at 0.5).
+- It is best that you word-tokenize your sentences. If you don't, you will still get a score, but less good (~4% less accurate if you translate them into labels with a cutoff at 0.5).
 
---Note that the word embedding file is a compressed ~190mb .gz file. Each run of speciteller.py will load the file to generate features. Thus it is best to avoid loading it multiple times, or modify predict.py and tailor it for your data loading purpose.
+- Note that the word embedding file is a compressed ~190mb .gz file. Each run of speciteller.py will load the file to generate features. Thus it is best to avoid loading it multiple times, or modify predict.py and tailor it for your data loading purpose.
 
 ## Contact
 This package is from [http://www.cis.upenn.edu/~nlp/software/speciteller.html](http://www.cis.upenn.edu/~nlp/software/speciteller.html)
-Please send comments and feedback to [Jessy Li](ljunyi@seas.upenn.edu)
+Please send comments and feedback to [Jessy Li](mailto:ljunyi@seas.upenn.edu)
