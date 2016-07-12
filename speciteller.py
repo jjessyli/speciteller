@@ -8,7 +8,7 @@ import sys
 from features import Space
 from generatefeatures import ModelNewText
 
-from . import RT
+RT = "./"
 
 BRNCLSTSPACEFILE = RT+"cotraining_models/brnclst1gram.space"
 SHALLOWSCALEFILE = RT+"cotraining_models/shallow.scale"

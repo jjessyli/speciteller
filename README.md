@@ -11,7 +11,7 @@ Speciteller is implemented using Python 2.7. It depends on the following package
 
 ## Data and resources
 
-Word lexicons for the models are available to download [here](www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that those resources come with license(s).
+Word lexicons for the models are available to download [here](www.cis.upenn.edu/~nlp/software/speciteller.html). Please note that those resources come with license(s). Decompress the tar ball under this (i.e., the speciteller) directory.
 
 ## Running Speciteller
 
@@ -28,7 +28,7 @@ For example:
 ```
 $ python speciteller.py --inputfile testsentences.txt --outputfile test.probs
 ```
-This will give you specificity scores for the two sentences in testsentences.txt in test.probs.
+This will give you specificity scores for the two sentences in `testsentences.txt` in `test.probs`.
 
 The scores range from 0 to 1, with 0 being most general and 1 being most specific.
 
