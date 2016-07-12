@@ -17,7 +17,7 @@ Word lexicons for the models are available to download [here](www.cis.upenn.edu/
 
 Call:
 ```
-$ ./speciteller.py --inputfile inputfile --outputfile predfile
+$ python speciteller.py --inputfile inputfile --outputfile predfile
 ```
 
 - `<inputfile>` should consists of *word-tokenized* sentences, one sentence per line;
@@ -25,7 +25,9 @@ $ ./speciteller.py --inputfile inputfile --outputfile predfile
 - An optional argument is `--write_all_preds`. When flagged this will generate two addtional files: `<predfile>.s` (prediction from the shallow model) and `<predfile>.w` (prediction from the word representation model).
 
 For example:
-$ python predict.py --inputfile testsentences.txt --outputfile test.probs
+```
+$ python speciteller.py --inputfile testsentences.txt --outputfile test.probs
+```
 This will give you specificity scores for the two sentences in testsentences.txt in test.probs.
 
 The scores range from 0 to 1, with 0 being most general and 1 being most specific.

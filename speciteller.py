@@ -1,5 +1,4 @@
 ## Author: Jessy Li (ljunyi@seas.upenn.edu)
-#!/usr/bin/python
 
 import argparse
 import liblinearutil as ll
@@ -9,7 +8,8 @@ import sys
 from features import Space
 from generatefeatures import ModelNewText
 
-RT = "/nlp/users/ljunyi/projects/speciteller/"
+from . import RT
+
 BRNCLSTSPACEFILE = RT+"cotraining_models/brnclst1gram.space"
 SHALLOWSCALEFILE = RT+"cotraining_models/shallow.scale"
 SHALLOWMODELFILE = RT+"cotraining_models/shallow.model"
