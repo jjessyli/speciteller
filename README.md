@@ -26,9 +26,9 @@ $ python speciteller.py --inputfile inputfile --outputfile predfile
 
 For example:
 ```
-$ python speciteller.py --inputfile testsentences.txt --outputfile test.probs
+$ python speciteller.py --inputfile sents_test --outputfile test.probs
 ```
-This will give you specificity scores for the two sentences in `testsentences.txt` in `test.probs`.
+This will give you specificity scores for the two sentences in `sents_test` in `test.probs`.
 
 The scores range from 0 to 1, with 0 being most general and 1 being most specific.
 
@@ -37,6 +37,10 @@ The scores range from 0 to 1, with 0 being most general and 1 being most specifi
 
 - Note that the word embedding file is a compressed ~190mb .gz file. Each run of speciteller.py will load the file to generate features. Thus it is best to avoid loading it multiple times, or modify predict.py and tailor it for your data loading purpose.
 
-## Contact
-This package is from [http://www.cis.upenn.edu/~nlp/software/speciteller.html](http://www.cis.upenn.edu/~nlp/software/speciteller.html)
-Please send comments and feedback to [Jessy Li](mailto:ljunyi@seas.upenn.edu)
+## Citation and contact
+
+Please cite the following paper:
+
+Junyi Jessy Li and Ani Nenkova. 2015. [Fast and Accurate Prediction of Sentence Specificity](http://www.seas.upenn.edu/~ljunyi/papers/specificity.pdf). Twenty-Ninth Conference on Artificial Intelligence (AAAI). \[[bibtex](http://www.seas.upenn.edu/~ljunyi/papers/specificity.bib)\]
+
+Please send comments and feedback to [Jessy Li](mailto:ljunyi@seas.upenn.edu).
