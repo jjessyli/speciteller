@@ -6,7 +6,8 @@ import os
 import gzip
 import numpy as np
 
-RT = "./"
+# RT = "./"
+RT = "/nlp/users/ljunyi/projects/speciteller/"
 
 MPQAFILE = RT+"resources/subjclueslen1-HLTEMNLP05.tff"
 MRCFILE = RT+"resources/mrc2.dct"

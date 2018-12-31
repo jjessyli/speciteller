@@ -8,7 +8,8 @@ import sys
 from features import Space
 from generatefeatures import ModelNewText
 
-RT = "./"
+# RT = "./"
+RT = "/nlp/users/ljunyi/projects/speciteller/"
 
 BRNCLSTSPACEFILE = RT+"cotraining_models/brnclst1gram.space"
 SHALLOWSCALEFILE = RT+"cotraining_models/shallow.scale"
