@@ -1,3 +1,13 @@
+# UPDATE:
+
+**Please check out our new paper on accurately predict real-valued sentence specificity with no domain restrictions, presented at AAAI 2019:**
+
+Wei-Jen Ko, Greg Durrett and Junyi Jessy Li, [Domain Agnostic Real-Valued Specificity Prediction](https://arxiv.org/abs/1811.05085), AAAI 2019
+
+The new system is located in this repo: [https://github.com/wjko2/Domain-Agnostic-Sentence-Specificity-Prediction](https://github.com/wjko2/Domain-Agnostic-Sentence-Specificity-Prediction)
+
+This system works well on non-news domains, such as Twitter, online reviews, and conversational data.
+
 # SPECITELLER is a tool to predict sentence specificity.
 
 The models in this package are obtained using co-training as described in Li and Nenkova, [Fast and Accurate Prediction of Sentence Specificity](http://www.seas.upenn.edu/~ljunyi/papers/specificity.pdf), AAAI 2015.
